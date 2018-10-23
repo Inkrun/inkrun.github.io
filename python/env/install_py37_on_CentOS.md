@@ -51,7 +51,7 @@ mv /usr/include/openssl/ /usr/include/openssl.bak
 ```
 5. 新版本配置
 ```bash
-#将安装好的openssl 的openssl命令软连到/usr/bin/openssl
+#将安装好的openssl 的openssl命令软链到/usr/bin/openssl
 ln -s /usr/local/openssl/include/openssl /usr/include/openssl
 #软链到升级后的libssl.so
 ln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/local/lib64/libssl.so
@@ -65,7 +65,8 @@ echo "/usr/local/openssl/lib" >> /etc/ld.so.conf
 #使修改后的/etc/ld.so.conf生效 
 ldconfig -v
 ```
-7.查看 `openssl` 版本
+
+7. 查看 `openssl` 版本
 ```bash
 openssl version
 # OpenSSL 1.1.1-pre8 (beta) 20 Jun 2018 -- 即安装成功
